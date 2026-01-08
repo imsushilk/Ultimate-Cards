@@ -16,8 +16,6 @@ document.querySelector('.spread').addEventListener('click', () => {
 
 document.querySelectorAll('.defcard').forEach((card) => {
   card.addEventListener('click', () => {
-    console.log('card click');
-    console.log(card.className);
     if (card.className.includes('ani')) {
       document.querySelectorAll('.defcard').forEach((card, i) => {
         setTimeout(() => {
