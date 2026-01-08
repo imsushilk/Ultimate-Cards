@@ -79,7 +79,7 @@
   }
 }
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .list {
     height: auto;
     display: flex;
@@ -92,14 +92,13 @@
   .card {
     position: static;
     float: none;
-    width: 45%;       /* two per row on mobile */
+    width: 45%;
     height: auto;
     margin: 8px;
     right: auto;
     bottom: auto;
   }
 
-  /* ani classes only affect transform on mobile, not absolute position */
   .card.ani0,
   .card.ani1,
   .card.ani2,
@@ -111,6 +110,6 @@
   .card.ani8 {
     right: auto;
     bottom: auto;
-    transform: translateY(0); /* or any subtle effect you want */
-  }
+    transform: translateY(0);
+  } */
 }
