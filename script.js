@@ -18,7 +18,7 @@ document.querySelectorAll(".defcard").forEach((card) => {
             card.className = "defcard card";
           }, i * 2 * 150);
         });
-      }, 5000);
+      }, 3000);
     }
   });
 });
