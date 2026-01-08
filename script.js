@@ -1,5 +1,5 @@
 $('.stack').click(function() {
-  
+  console.log('stacking');
   $(".card").each(function(e) {
 
     setTimeout(function() {
@@ -11,7 +11,7 @@ $('.stack').click(function() {
 });
 
 $('.spread').click(function() {
-  
+  console.log('spreading');
   $(".card").each(function(e) {
 
     setTimeout(function() {
