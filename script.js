@@ -1,7 +1,7 @@
 document.querySelector('.stack').addEventListener('click', () => {
   document.querySelectorAll('.card').forEach((card, i) => {
     setTimeout(() => {
-      card.className = 'card';
+      card.className = 'defcard card';
     }, i * 150);
   });
 });
@@ -9,13 +9,14 @@ document.querySelector('.stack').addEventListener('click', () => {
 document.querySelector('.spread').addEventListener('click', () => {
   document.querySelectorAll('.card').forEach((card, i) => {
     setTimeout(() => {
-      card.className = 'card ani' + i;
+      card.className = 'defcard card ani' + i;
     }, i * 150);
   });
 });
 
 document.querySelectorAll('.defcard').forEach((card) => {
   card.addEventListener('click', () => {
+    console.log('card click);
     console.log(card.classList);
     if (card.classList.contains('ani')) {
       document.querySelectorAll('.defcard').forEach((card, i) => {
