@@ -12,69 +12,105 @@
 
 .card {
   transition: all 1s cubic-bezier(0.68,-.55,.265,1.55);
-  
+
   perspective: 1000;
   -ms-transform: perspective(1000px);
   -moz-transform: perspective(1000px);
   -ms-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  
+
   float: left;
   width: 222px;
   height: 311px;
   background-color: #ee2;
-  
+
   position: absolute;
   right: 45%;
   bottom: 20%;
   margin: 30px 0 15px 15px;
-  
+
   &:nth-child(5n) {
     margin-right: 0;
   }
-  
+
   &.ani0 {
     right: 948px;
     bottom: 326px;
   }
-  
+
   &.ani1 {
     right: 711px;
     bottom: 326px;
   }
-  
+
   &.ani2 {
     right: 474px;
     bottom: 326px;
   }
-  
+
   &.ani3 {
     right: 237px;
     bottom: 326px;
   }
-  
+
   &.ani4 {
     right: 0;
     bottom: 326px;
   }
-  
+
   &.ani5 {
     right: 948px;
     bottom: 0;
   }
-  
+
   &.ani6 {
     right: 711px;
     bottom: 0;
   }
-  
+
   &.ani7 {
     right: 474px;
     bottom: 0;
   }
-  
+
   &.ani8 {
     right: 237px;
     bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .list {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    position: static;
+  }
+
+  .card {
+    position: static;
+    float: none;
+    width: 45%;       /* two per row on mobile */
+    height: auto;
+    margin: 8px;
+    right: auto;
+    bottom: auto;
+  }
+
+  /* ani classes only affect transform on mobile, not absolute position */
+  .card.ani0,
+  .card.ani1,
+  .card.ani2,
+  .card.ani3,
+  .card.ani4,
+  .card.ani5,
+  .card.ani6,
+  .card.ani7,
+  .card.ani8 {
+    right: auto;
+    bottom: auto;
+    transform: translateY(0); /* or any subtle effect you want */
   }
 }
