@@ -1,12 +1,6 @@
 .grid {
   width: 100%;
   margin: 0 auto;
-  
-  /* Scale container: shrinks entire layout proportionally */
-  --base-width: 1200px; /* your original design width */
-  transform: scale(calc(100vw / var(--base-width)));
-  transform-origin: top center;
-  height: calc(var(--base-width) * 0.54); /* 652px / 1200px */
 }
 
 .list {
@@ -82,12 +76,5 @@
   &.ani8 {
     right: 237px;
     bottom: 0;
-  }
-}
-
-/* Mobile minimum scale */
-@media (max-width: 600px) {
-  .grid {
-    transform: scale(0.4); /* minimum readable size */
   }
 }
