@@ -1,4 +1,4 @@
-document.querySelector('.stack').addEventListener('click', () => {
+/*document.querySelector('.stack').addEventListener('click', () => {
   document.querySelectorAll('.card').forEach((card, i) => {
     setTimeout(() => {
       card.className = 'defcard card';
@@ -12,7 +12,7 @@ document.querySelector('.spread').addEventListener('click', () => {
       card.className = 'defcard card ani' + i;
     }, i * 150);
   });
-});
+});*/
 
 document.querySelectorAll('.defcard').forEach((card) => {
   card.addEventListener('click', () => {
