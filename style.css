@@ -1,24 +1,34 @@
+body {
+  background-color: #100e17;
+  font-family: 'Open Sans', sans-serif;
+  height: inherit;
+}
+
 .grid {
+  /* position: absolute; */
+  height: 100%;
   width: 100%;
-  margin: 0 auto;
+  /* top: 60px; */
+  display: flex;
 }
 
 .list {
-  height: 652px;
-  position: relative;
+  /* height: 652px; */
+  /* background-color: red; */
+  /* position: relative; */
   list-style-type: none;
-  padding-left: 0;
+  /* padding-left: 0; */
 }
 
-.defcard{
-  background-image: url('logo.png');
-   background-size: contain;
-   background-repeat: no-repeat;
-   background-position: center;
+.defcard {
+  background-image: url("logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .card {
-  transition: all 1s cubic-bezier(0.68,-.55,.265,1.55);
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
   perspective: 1000;
   -ms-transform: perspective(1000px);
@@ -29,95 +39,17 @@
   float: left;
   width: 10em;
   height: 15em;
-  background-color: #eee;
+  background-color: #17141d;
 
+  display: fl;
   position: absolute;
-  right: 45%;
-  bottom: 20%;
+  right: 50%;
+  bottom: 30%;
   margin: 30px 0 15px 15px;
   border-radius: 10%;
-
-  &:nth-child(5n) {
-    margin-right: 0;
-  }
-
-  &.ani0 {
-    right: 948px;
-    bottom: 326px;
-  }
-
-  &.ani1 {
-    right: 711px;
-    bottom: 326px;
-  }
-
-  &.ani2 {
-    right: 474px;
-    bottom: 326px;
-  }
-
-  &.ani3 {
-    right: 237px;
-    bottom: 326px;
-  }
-
-  &.ani4 {
-    right: 0;
-    bottom: 326px;
-  }
-
-  &.ani5 {
-    right: 948px;
-    bottom: 0;
-  }
-
-  &.ani6 {
-    right: 711px;
-    bottom: 0;
-  }
-
-  &.ani7 {
-    right: 474px;
-    bottom: 0;
-  }
-
-  &.ani8 {
-    right: 237px;
-    bottom: 0;
-  }
 }
 
-/* @media (max-width: 600px) {
-  .list {
-    height: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px;
-    position: static;
-  }
-
-  .card {
-    position: static;
-    float: none;
-    width: 45%;
-    height: auto;
-    margin: 8px;
-    right: auto;
-    bottom: auto;
-  }
-
-  .card.ani0,
-  .card.ani1,
-  .card.ani2,
-  .card.ani3,
-  .card.ani4,
-  .card.ani5,
-  .card.ani6,
-  .card.ani7,
-  .card.ani8 {
-    right: auto;
-    bottom: auto;
-    transform: translateY(0);
-  }
-} */
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
