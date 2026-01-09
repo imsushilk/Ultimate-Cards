@@ -85,3 +85,10 @@ body {
 .no-hover .ani:hover {
   pointer-events: none;
 }
+
+@media (hover: none) {
+  .ani:hover {
+    pointer-events: none;
+    transform: none;
+  }
+}

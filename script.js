@@ -44,7 +44,31 @@ document.body.addEventListener("touchstart", function () {
   console.log('touchstart');
 });
 
-document.body.addEventListener("mousemove", function () {
-  document.body.classList.remove("no-hover");
-  console.log('mousemove');
+let lastTap = 0;
+
+document.addEventListener("touchend", function (event) {
+  const currentTime = new Date().getTime();
+  const tapLength = currentTime - lastTap;
+
+  if (tapLength < 300 && tapLength > 0) {
+    console.log("Double tap detected");
+    document.querySelectorAll(".defcard").forEach((card, i) => {
+        setTimeout(() => {
+          card.className = "defcard card";
+          card.style = '';
+        }, i * 0.75 * 150);
+      });
+  }
+
+  lastTap = currentTime;
 });
+
+let lastTouchEnd = 0;
+
+document.addEventListener("touchend", function (event) {
+  const now = new Date().getTime();
+  if (now - lastTouchEnd <= 300) {
+    event.preventDefault(); // Prevent double-tap zoom
+  }
+  lastTouchEnd = now;
+}, { passive: false });
