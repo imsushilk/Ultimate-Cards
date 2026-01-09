@@ -5,37 +5,26 @@ document.querySelectorAll(".defcard").forEach((card) => {
       document.querySelectorAll(".defcard").forEach((card, i) => {
         setTimeout(() => {
           card.className = "defcard card";
-          card.style.backgroundColor = "#17141d";
-          card.style.right = '50%';
-          card.style.bottom = '30%';
-          card.style.boxShadow = '';
+          card.style = '';
         }, i * 150);
       });
     } else {
       document.querySelectorAll(".defcard").forEach((card, i) => {
         setTimeout(() => {
-          // card.className = `defcard card ani${i}`;
           card.className = `defcard card ani`;
-          // card.style.backgroundColor = getRandomColor();
-          card.style.right = `${((i+1) * 100) +350}px`;
-          card.style.bottom = '50%';
-          card.style.boxShadow = '-1rem 0.2rem 0.5rem #000';
+          let cardsSpace = (50 / document.querySelectorAll(".defcard").length) * i;
+          card.style.right = `${cardsSpace + 22}%`;
         }, i * 150);
       });
       // setTimeout(() => {
       //   document.querySelectorAll(".defcard").forEach((card, i) => {
       //     setTimeout(() => {
       //       card.className = "defcard card";
-      //     }, i * 2 * 150);
+      //       card.style = '';
+      //     }, i * 1 * 150);
       //   });
       // }, 1500);
     }
-
-
-    document.querySelectorAll(".defcard").forEach((card, i) => {
-      console.log(i);
-      console.log(card.className);
-    });
   });
 });
 

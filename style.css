@@ -1,23 +1,25 @@
 body {
   background-color: #100e17;
   font-family: 'Open Sans', sans-serif;
-  height: inherit;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .grid {
-  /* position: absolute; */
+  position: absolute;
   height: 100%;
   width: 100%;
-  /* top: 60px; */
   display: flex;
+  justify-content: center;
 }
 
 .list {
-  /* height: 652px; */
-  /* background-color: red; */
-  /* position: relative; */
   list-style-type: none;
-  /* padding-left: 0; */
+  display: flex;
+  justify-content: center;
 }
 
 .defcard {
@@ -25,31 +27,34 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+  background-color: #17141d;
+  right: 43%;
+  bottom: 30%;
+  box-shadow: -0.4rem 0.1rem 0.1rem #000;
 }
 
 .card {
   transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-  perspective: 1000;
-  -ms-transform: perspective(1000px);
-  -moz-transform: perspective(1000px);
-  -ms-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
 
   float: left;
   width: 10em;
   height: 15em;
   background-color: #17141d;
 
-  display: fl;
+  display: flex;
   position: absolute;
-  right: 50%;
   bottom: 30%;
   margin: 30px 0 15px 15px;
   border-radius: 10%;
 }
 
-.card:hover {
+.ani {
+  bottom: 50%;
+  box-shadow: -1rem 0.2rem 0.5rem #000;
+}
+
+.ani:hover {
   transform: translateY(-20px);
   transition: 0.4s ease-out;
 }
