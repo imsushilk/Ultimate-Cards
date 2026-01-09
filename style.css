@@ -22,16 +22,36 @@ body {
   justify-content: center;
 }
 
-.defcard {
+.defaultcard {
   background-image: url("logo.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
   background-color: #17141d;
+  float: left;
+  width: 15em;
+  height: 23em;
   right: 40%;
-  bottom: 40%;
+  bottom: 30%;
   box-shadow: -0.4rem 0.1rem 0.1rem #000;
+
+  display: flex;
+  position: absolute;
+  margin: 30px 0 15px 15px;
+  border-radius: 10%;
+}
+
+.ani.flippedcard {
+  background-image: url("front.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  bottom:60%;
+  right: 40%;
 }
 
 .card {
@@ -50,12 +70,12 @@ body {
 
 .ani {
   position: absolute;
-  bottom: 50%;
+  bottom: 40%;
   box-shadow: -1rem 0.2rem 0.5rem #000;
 }
 
-.ani:hover {
-  transform: translateY(-20px);
+.selectedcard {
+  transform: translateY(-4em);
   transition: 0.4s ease-out;
 }
 
@@ -82,13 +102,15 @@ body {
   bottom: 45%; 
 } */
 
-.no-hover .ani:hover {
-  pointer-events: none;
-}
 
-@media (hover: none) {
+/* @media (hover: none) {
   .ani:hover {
     pointer-events: none;
     transform: none;
   }
+} */
+
+.flipping {
+    transform: translate(0, 20px) rotateY(90deg);
+    -webkit-transform: translate(0, 20px) rotateY(90deg);
 }
