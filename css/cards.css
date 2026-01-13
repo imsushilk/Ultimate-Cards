@@ -1,0 +1,80 @@
+.list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+}
+
+.defaultcard {
+  position: absolute;
+  background-image: url("../images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  perspective: 1000px; /* Enable 3D perspective */
+
+  transition: all 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  background-color: #17141d;
+  float: left;
+  width: 10vw;
+  height: calc(10vw * 1.5);
+  max-width: 225px;
+  max-height: 337.5px;
+  right: 40%;
+  bottom: 30%;
+  box-shadow: -0.4rem 0.1rem 0.1rem #000;
+
+  display: flex;
+  position: absolute;
+  margin: 30px 0 15px 15px;
+  border-radius: 10%;
+}
+
+.ani.flippedcard {
+  background-image: var(--profileName);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 75vw;
+  height: calc(75vw * 1.5);
+  bottom: 15%;
+  right: 11%;
+  z-index: 1;
+  border-radius: 5%;
+  border-style: solid;
+  border-width: thick;
+  border-color: cornsilk;
+}
+
+.ani {
+  position: absolute;
+  right: var(--spacing);
+  bottom: 40%;
+  box-shadow: -1rem 0.2rem 0.5rem #000;
+}
+
+.selectedcard {
+  transform: translateY(-4em);
+  transition: 0.4s ease-out;
+}
+
+.flipping {
+  transform: translate(0, 20px) rotateY(90deg);
+  -webkit-transform: translate(0, 20px) rotateY(90deg);
+}
+
+/* Responsive Design: Adjust card sizes for smaller screens */
+@media (max-width: 768px) {
+  .defaultcard {
+    width: 20vw;
+    height: calc(20vw * 1.5);
+  }
+}
+
+@media (max-width: 480px) {
+  .defaultcard {
+    width: 30vw;
+    height: calc(30vw * 1.5);
+  }
+}
