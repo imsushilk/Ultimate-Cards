@@ -14,7 +14,7 @@ export function addEventListeners() {
           if (!card.className.includes("flippedcard")) {
             flipCard(card);
           } else {
-            unhoverCards();
+            // unhoverCards();
           }
         }
       }

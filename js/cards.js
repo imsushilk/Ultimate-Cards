@@ -2,10 +2,14 @@
 export function generateCards(containerSelector, numberOfCards = 7) {
   const container = document.querySelector(containerSelector);
   for (let i = 0; i < numberOfCards; i++) {
+    const divWrapper = document.createElement("div"); // Create a div wrapper
+    // divWrapper.className = "wrap";
     const listItem = document.createElement("li");
-    listItem.className = "defaultcard";
+    // listItem.className = "defaultcard";
+    listItem.className = "defaultcard ani selectedcard flippedcard";
     listItem.id = `card${i + 1}`;
-    container.appendChild(listItem);
+    divWrapper.appendChild(listItem); // Append li to the div wrapper
+    container.appendChild(divWrapper); // Append the div wrapper to the container
   }
 }
 
@@ -17,6 +21,9 @@ export function flipCard(elem) {
     elem.removeEventListener("transitionend", handler);
     elem.classList.remove("flipping");
   });
+  VanillaTilt.init(elem, {
+		max: 5,
+	});
 }
 
 // Unhover all cards
