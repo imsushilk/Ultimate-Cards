@@ -4,6 +4,7 @@ export function resetCards() {
     setTimeout(() => {
       card.className = "defaultcard";
     }, i * 0.75 * 150);
+    card.vanillaTilt.destroy();
   });
 }
 
