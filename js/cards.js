@@ -20,11 +20,11 @@ export function flipCard(elem) {
     elem.classList.toggle("flippedcard");
     elem.removeEventListener("transitionend", handler);
     elem.classList.remove("flipping");
+    VanillaTilt.init(elem, {
+      max: 25,
+      speed: 400
+    });
   });
-  VanillaTilt.init(elem, {
-		max: 25,
-    speed: 400
-	});
 }
 
 // Unhover all cards
