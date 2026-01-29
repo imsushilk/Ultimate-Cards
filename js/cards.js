@@ -35,6 +35,7 @@ export function unhoverCards() {
       card.classList.remove("flippedcard");
       setTimeout(() => {
         card.classList.remove("selectedcard");
+        card.vanillaTilt.destroy();
       }, 100);
     });
     setTimeout(resolve, cards.length * 150);
