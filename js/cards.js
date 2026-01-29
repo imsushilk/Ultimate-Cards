@@ -15,15 +15,20 @@ export function generateCards(containerSelector, numberOfCards = 7) {
 
 // Flip a card
 export function flipCard(elem) {
-  elem.classList.add("flipping");
-  elem.addEventListener("transitionend", function handler() {
-    elem.classList.toggle("flippedcard");
-    elem.removeEventListener("transitionend", handler);
-    elem.classList.remove("flipping");
-    VanillaTilt.init(elem, {
-      max: 25,
-      speed: 400
+  return new Promise((resolve) => {
+    elem.classList.add("flipping");
+    elem.addEventListener("transitionend", function handler() {
+      elem.classList.toggle("flippedcard");
+      elem.removeEventListener("transitionend", handler);
+      elem.classList.remove("flipping");
     });
+  });
+}
+
+export function tiltCard(elem) {
+  VanillaTilt.init(elem, {
+    max: 25,
+    speed: 400,
   });
 }
 

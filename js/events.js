@@ -1,4 +1,4 @@
-import { flipCard, unhoverCards } from "./cards.js";
+import { flipCard, tiltCard, unhoverCards } from "./cards.js";
 import { spreadCards, resetCards } from "./animations.js";
 
 export function addEventListeners() {
@@ -12,7 +12,7 @@ export function addEventListeners() {
           card.classList.add("selectedcard");
         } else {
           if (!card.className.includes("flippedcard")) {
-            flipCard(card);
+            flipCard(card).then(() => tiltCard(card));
           } else {
             // unhoverCards();
           }
