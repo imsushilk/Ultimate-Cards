@@ -3,8 +3,9 @@ export function resetCards() {
   document.querySelectorAll(".defaultcard").forEach((card, i) => {
     setTimeout(() => {
       card.className = "defaultcard";
+      card.vanillaTilt.destroy();
     }, i * 0.75 * 150);
-    card.vanillaTilt.destroy();
+    
   });
 }
 
