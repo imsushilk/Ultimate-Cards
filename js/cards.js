@@ -3,7 +3,7 @@ export function generateCards(containerSelector, numberOfCards = 7) {
   const container = document.querySelector(containerSelector);
   for (let i = 0; i < numberOfCards; i++) {
     const divWrapper = document.createElement("div"); // Create a div wrapper
-    // divWrapper.className = "wrap";
+    divWrapper.className = "card-wrapper";
     const listItem = document.createElement("li");
     listItem.className = "defaultcard";
     // listItem.className = "defaultcard ani selectedcard flippedcard";
@@ -30,6 +30,7 @@ export function tiltCard(elem) {
   VanillaTilt.init(elem, {
     max: 25,
     speed: 400,
+    scale: 1.1
   });
 }
 
