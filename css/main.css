@@ -1,17 +1,15 @@
+html {
+  overflow: hidden;
+}
+
 body {
   background-color: #292733;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   height: 100vh;
   margin: 0;
+  position: relative;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.grid {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }

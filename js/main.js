@@ -1,9 +1,8 @@
 import { generateCards } from "./cards.js";
 import { addEventListeners } from "./events.js";
-import { setPhotoUrl, preventDoubleTapZoom } from "./utils.js";
+import { fetchProfileData } from "./utils.js";
 
 // Initialize the app
-generateCards(".list");
-setPhotoUrl();
+const profileData = await fetchProfileData();
+generateCards(".deck-container", 7, profileData);
 addEventListeners();
-preventDoubleTapZoom();
