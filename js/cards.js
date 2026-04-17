@@ -2,7 +2,7 @@ const tiltInstances = new Map();
 
 // Generate cards dynamically
 export function generateCards(containerSelector, numberOfCards = 1, profileData = {}) {
-  this.requestTiltPermission();
+  requestTiltPermission();
   const container = document.querySelector(containerSelector);
   const number = profileData.number ?? "#00";
   const name = profileData.name ?? "Ursa Major Junior";
