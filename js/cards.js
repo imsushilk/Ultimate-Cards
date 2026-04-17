@@ -2,7 +2,6 @@ const tiltInstances = new Map();
 
 // Generate cards dynamically
 export function generateCards(containerSelector, numberOfCards = 1, profileData = {}) {
-  requestTiltPermission();
   const container = document.querySelector(containerSelector);
   const number = profileData.number ?? "#00";
   const name = profileData.name ?? "Ursa Major Junior";
@@ -37,11 +36,14 @@ export function generateCards(containerSelector, numberOfCards = 1, profileData 
 }
 
 function requestTiltPermission() {
-  if (typeof DeviceMotionEvent.requestPermission === 'function') {
-    DeviceMotionEvent.requestPermission()
+  console.log('Requesting tilt permission');
+  console.log('DeviceOrientationEvent:', DeviceOrientationEvent.requestPermission);
+  if (typeof DeviceOrientationEvent !== 'undefined' &&
+      typeof DeviceOrientationEvent.requestPermission === 'function') {
+    DeviceOrientationEvent.requestPermission()
       .then(permissionState => {
-        if (permissionState === 'granted') {
-          // Permission granted, Vanilla-tilt will now work with gyroscope
+        if (permissionState !== 'granted') {
+          console.warn('Device orientation permission denied');
         }
       })
       .catch(console.error);
@@ -50,6 +52,7 @@ function requestTiltPermission() {
 
 // Spread cards with staggered effect
 export function spreadCards() {
+  requestTiltPermission();
   let cardList = document.querySelectorAll(".defaultcard");
   cardList.forEach((card, i) => {
     setTimeout(() => {
