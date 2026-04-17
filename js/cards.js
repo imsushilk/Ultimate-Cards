@@ -2,6 +2,7 @@ const tiltInstances = new Map();
 
 // Generate cards dynamically
 export function generateCards(containerSelector, numberOfCards = 1, profileData = {}) {
+  this.requestTiltPermission();
   const container = document.querySelector(containerSelector);
   const number = profileData.number ?? "#00";
   const name = profileData.name ?? "Ursa Major Junior";
@@ -32,6 +33,18 @@ export function generateCards(containerSelector, numberOfCards = 1, profileData 
         </div>
       </div>
     `);
+  }
+}
+
+function requestTiltPermission() {
+  if (typeof DeviceMotionEvent.requestPermission === 'function') {
+    DeviceMotionEvent.requestPermission()
+      .then(permissionState => {
+        if (permissionState === 'granted') {
+          // Permission granted, Vanilla-tilt will now work with gyroscope
+        }
+      })
+      .catch(console.error);
   }
 }
 
