@@ -1,7 +1,8 @@
-{
+﻿{
     "name": "Mithi Farias",
     "number": "#95",
-    "description": "A true warrior on the field, undeterred by anyone or anything. Off it, she's a free spirit - climbing trees, nailing cartwheels, and chasing every bit of fun. P.S.: Don't ask her about her bumps! :P",
+    "description": "A true warrior on the field, undeterred by anyone or anything. Off it, she\u0027s a free spirit - climbing trees, nailing cartwheels, and chasing every bit of fun. P.S.: Don\u0027t ask her about her bumps! :P",
     "title": "THE WARRIOR",
-    "image": "mithi.jpeg"
+    "image": "mithi.jpeg",
+    "team": "airbenders"
 }

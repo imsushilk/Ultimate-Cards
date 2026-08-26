@@ -1,7 +1,8 @@
-{
+﻿{
     "name": "Aaron Varghese",
     "number": "#00",
-    "description": "With smooth throws and a full arsenal at his disposal, he breaks hearts and marks alike. A relentless competitor, he's powered by grit, determination, and an unshakable refusal to quit.",
+    "description": "With smooth throws and a full arsenal at his disposal, he breaks hearts and marks alike. A relentless competitor, he\u0027s powered by grit, determination, and an unshakable refusal to quit.",
     "title": "THE HEARTBREAKER",
-    "image": "aaron.jpeg"
+    "image": "aaron.jpeg",
+    "team": "airbenders"
 }

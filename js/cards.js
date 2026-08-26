@@ -7,10 +7,21 @@ export function generateCards(containerSelector, numberOfCards = 1, profileData 
   const name = profileData.name ?? "Ursa Major Junior";
   const title = profileData.title ?? "THE TITLE";
   const description = profileData.description ?? "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel sapien eget nunc efficitur varius. Sed at ligula a enim efficitur convallis.";
+  const teamLogo = profileData.team?.logo;
+  const teamBaseColor = profileData.team?.baseColor;
   document.documentElement.style.setProperty(
       "--image",
       `url(../images/${profileData.image})`
     );
+  if (teamLogo) {
+    document.documentElement.style.setProperty(
+      "--logo",
+      `url(../images/${teamLogo})`
+    );
+  }
+  if (teamBaseColor) {
+    document.documentElement.style.setProperty("--base-color", teamBaseColor);
+  }
   for (let i = 0; i < numberOfCards; i++) {
     container.insertAdjacentHTML("beforeend", `
       <div class="card-container" id="card${i + 1}">

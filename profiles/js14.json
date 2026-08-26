@@ -1,7 +1,8 @@
-{
+﻿{
     "name": "Janani Sivanesan",
     "number": "#14",
     "title": "THE VOICE",
-    "description": "Loud on the sideline and unwavering in support, she's the team’s biggest cheerleader and constant source of energy. Fearless on field, ever ready to put her body on the line, she makes sure her presence is known.",
-    "image": "janani.jpeg"
+    "description": "Loud on the sideline and unwavering in support, she\u0027s the teamâ€™s biggest cheerleader and constant source of energy. Fearless on field, ever ready to put her body on the line, she makes sure her presence is known.",
+    "image": "janani.jpeg",
+    "team": "airbenders"
 }

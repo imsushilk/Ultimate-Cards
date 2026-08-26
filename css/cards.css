@@ -133,12 +133,12 @@
 }
 
 .backcard {
-  background: url("../images/logo.png");
+  background-image: var(--logo, url("../images/logo.png"));
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 
-  background-color: #17141d;
+  background-color: var(--base-color, #17141d);
   display: flex;
   border-radius: 10%;
 
