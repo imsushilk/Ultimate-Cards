@@ -13,7 +13,7 @@
   position: absolute;
   width: 15vw;
   height: calc(15vw * 1.5);
-  bottom: calc(15 * var(--vh, 1vh));
+  bottom: calc(20 * var(--vh, 1vh));
   right: calc(50vw - (15vw / 2)); 
 }
 
