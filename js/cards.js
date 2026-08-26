@@ -39,7 +39,7 @@ export function generateCards(containerSelector, numberOfCards = 1, profileData 
               ${description}
             </div>
           </div>
-          <div class="backcard back"></div>
+          <div class="backcard"></div>
         </div>
       </div>
     `);
